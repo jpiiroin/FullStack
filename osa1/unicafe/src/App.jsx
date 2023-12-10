@@ -8,14 +8,34 @@ const Statistics = (props) => {
     )
   }
   return (
-    <div>
-      <StatisticsLine text="good" value={props.good}/>
-      <StatisticsLine text="neutral" value={props.neutral}/>
-      <StatisticsLine text="bad" value={props.bad}/>
-      <StatisticsLine text="all" value={props.all}/>
-      <StatisticsLine text="average" value={props.average}/>
-      <StatisticsLine text="positive" value={props.positive}/>
-    </div>
+    <table>
+      <tbody>
+        <tr>
+          <td>good</td>
+          <td>&nbsp;{props.good}</td>
+        </tr>
+        <tr>
+          <td>neutral</td>
+          <td>&nbsp;{props.neutral}</td>
+        </tr>
+        <tr>
+          <td>bad</td>
+          <td>&nbsp;{props.bad}</td>
+        </tr>
+        <tr>
+          <td>all</td>
+          <td>&nbsp;{props.all}</td>
+        </tr>
+        <tr>
+          <td>average</td>
+          <td>&nbsp;{props.average}</td>
+        </tr>
+        <tr>
+          <td>positive</td>
+          <td>&nbsp;{props.positive}</td>
+        </tr>
+      </tbody>
+    </table>
   )
 }
 
@@ -23,10 +43,6 @@ const Button = (props) => (
   <button onClick={props.action}> 
     {props.text}
   </button>
-)
-
-const StatisticsLine = (props) => (
-  <div>{props.text} {props.value}</div>
 )
 
 const App = () => {
@@ -48,7 +64,7 @@ const App = () => {
       <h1>Statistics</h1>
       <Statistics good={good} neutral={neutral} bad={bad} 
       all={all} average={average} positive={positive}/>
-   </div>
+    </div>
   )
 }
 
