@@ -2,12 +2,12 @@ const Header = ({ course }) =>
   <h1>{course.name}</h1>
 
 const Total = ({ course }) => {
-  const total = 0
-  const sum = course.map(
+  const sum = 0
+  const total = course.map(
     part => part.exercises).
-      reduce((a, b) => a + b, total,)
+      reduce((a, b) => a + b, sum,)
   return (
-    <b>total of {sum} exercises</b>
+    <b>total of {total} exercises</b>
   )
 }
 
